@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "": {
+      "model": "jemzmod:block/jemzcoin_block"
+    }
+  }
+}

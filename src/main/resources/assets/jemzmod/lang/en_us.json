@@ -1,3 +1,8 @@
 {
-  "item.jemzmod.jemzcoin" : "Jemz Coin"
+  "item.jemzmod.jemzcoin" : "Jemz Coin",
+  "item.jemzmod.jemzcoinunwrapped" : "Jemz Coin Unwrapped",
+
+  "block.jemzmod.jemzcoin_block" : "Block Of Jemz Coins",
+
+  "creativetab.jemz_tab": "Jemz Tab"
 }

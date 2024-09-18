@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "jemzmod:jemzcoin"
+    }
+  },
+  "result": {
+    "item": "jemzmod:jemzcoin_block"
+  }
+}

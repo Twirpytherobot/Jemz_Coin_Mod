@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "jemzmod:block/jemzcoin_block"
+  }
+}

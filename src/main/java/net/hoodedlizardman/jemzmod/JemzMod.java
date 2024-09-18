@@ -1,6 +1,8 @@
 package net.hoodedlizardman.jemzmod;
 
 import com.mojang.logging.LogUtils;
+import net.hoodedlizardman.jemzmod.block.ModBlocks;
+import net.hoodedlizardman.jemzmod.item.ModCreativeModeTabs;
 import net.hoodedlizardman.jemzmod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -22,16 +24,17 @@ public class JemzMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "jemzmod";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
 
     public JemzMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -51,6 +54,7 @@ public class JemzMod
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
         {
             event.accept(ModItems.JEMZCOIN);
+            event.accept(ModItems.JEMZCOINUNWRAPPED);
         }
     }
 
