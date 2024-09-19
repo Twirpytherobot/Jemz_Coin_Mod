@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.hoodedlizardman.jemzmod.block.ModBlocks;
 import net.hoodedlizardman.jemzmod.item.ModCreativeModeTabs;
 import net.hoodedlizardman.jemzmod.item.ModItems;
+import net.hoodedlizardman.jemzmod.loot.ModLootModifiers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,11 +36,13 @@ public class JemzMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(this::addCreative);
+
 
     }
 
@@ -48,15 +51,7 @@ public class JemzMod
 
     }
 
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
-        {
-            event.accept(ModItems.JEMZCOIN);
-            event.accept(ModItems.JEMZCOINUNWRAPPED);
-        }
-    }
+
 
 
     @SubscribeEvent

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "jemzmod:jemzcoinwrapper"
+    }
+  },
+  "result": {
+    "item": "minecraft:gold_nugget"
+  }
+}

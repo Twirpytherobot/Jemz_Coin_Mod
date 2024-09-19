@@ -19,6 +19,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.JEMZCOIN.get());
                 output.accept(ModItems.JEMZCOINUNWRAPPED.get());
                 output.accept(ModBlocks.JEMZCOIN_BLOCK.get());
+                output.accept(ModItems.JEMZCOINWRAPPER.get());
+                output.accept(ModItems.ZMEJCOIN.get());
             })
             .build());
 
