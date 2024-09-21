@@ -2,9 +2,11 @@ package net.hoodedlizardman.jemzmod.item;
 
 import net.hoodedlizardman.jemzmod.JemzMod;
 import net.hoodedlizardman.jemzmod.block.ModBlocks;
+import net.hoodedlizardman.jemzmod.block.custom.JemzCoinVendingMachineBlock;
 import net.hoodedlizardman.jemzmod.item.custom.JemzcoinItem;
 import net.minecraft.util.datafix.fixes.ItemStackEnchantmentNamesFix;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;

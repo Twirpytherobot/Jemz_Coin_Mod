@@ -5,6 +5,6 @@
   "item.jemzmod.zmejcoin" : "Zmej Coin",
   "block.jemzmod.jemzcoinplant_block": "Jemz Coin Plant",
   "block.jemzmod.jemzcoin_block" : "Block Of Jemz Coins",
-
+  "block.jemzmod.jemzcoinvendingmachine_block" : "Jemz Coin Vending Machine",
   "creativetab.jemz_tab": "Jemz Tab"
 }

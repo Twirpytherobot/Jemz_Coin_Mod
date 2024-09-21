@@ -1,6 +1,7 @@
 package net.hoodedlizardman.jemzmod.block;
 
 import net.hoodedlizardman.jemzmod.JemzMod;
+import net.hoodedlizardman.jemzmod.block.custom.JemzCoinVendingMachineBlock;
 import net.hoodedlizardman.jemzmod.block.custom.JemzcoinPlantBlock;
 import net.hoodedlizardman.jemzmod.item.ModItems;
 import net.minecraft.client.resources.model.Material;
@@ -27,6 +28,8 @@ public class ModBlocks
 
     public static final RegistryObject<Block> JEMZCOINPLANT_BLOCK = BLOCKS.register("jemzcoinplant_block",
             () -> new JemzcoinPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
+
+    public static final RegistryObject<Block> JEMZCOINVENDINGMACHINE_BLOCK = registerBlock("jemzcoinvendingmachine_block",() -> new JemzCoinVendingMachineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

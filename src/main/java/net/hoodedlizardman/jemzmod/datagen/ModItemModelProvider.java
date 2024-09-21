@@ -42,6 +42,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(ModItems.JEMZCOIN);
+        simpleItem(ModItems.JEMZCOINWRAPPER);
+        simpleItem(ModItems.JEMZCOINUNWRAPPED);
+        simpleItem(ModItems.ZMEJCOIN);
+//      evenSimplerBlockItem(ModBlocks.JEMZCOINVENDINGMACHINE_BLOCK);
 //        simpleItem(ModItems.SAPPHIRE);
 //        simpleItem(ModItems.RAW_SAPPHIRE);
 //

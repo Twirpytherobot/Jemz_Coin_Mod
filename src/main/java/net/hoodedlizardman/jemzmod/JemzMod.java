@@ -6,6 +6,8 @@ import net.hoodedlizardman.jemzmod.item.ModCreativeModeTabs;
 import net.hoodedlizardman.jemzmod.item.ModItems;
 import net.hoodedlizardman.jemzmod.loot.ModLootModifiers;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -52,8 +54,6 @@ public class JemzMod
     }
 
 
-
-
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -69,6 +69,7 @@ public class JemzMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
         }
     }
 }
