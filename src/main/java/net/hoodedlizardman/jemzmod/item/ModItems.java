@@ -3,10 +3,7 @@ package net.hoodedlizardman.jemzmod.item;
 import net.hoodedlizardman.jemzmod.JemzMod;
 import net.hoodedlizardman.jemzmod.block.ModBlocks;
 import net.hoodedlizardman.jemzmod.block.custom.JemzCoinVendingMachineBlock;
-import net.hoodedlizardman.jemzmod.item.custom.JemzcoinItem;
-import net.hoodedlizardman.jemzmod.item.custom.JemzcoinSwordStable;
-import net.hoodedlizardman.jemzmod.item.custom.JemzcoinSwordUnstable;
-import net.hoodedlizardman.jemzmod.item.custom.JemzcoinUnstableItem;
+import net.hoodedlizardman.jemzmod.item.custom.*;
 import net.minecraft.util.datafix.fixes.ItemStackEnchantmentNamesFix;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -38,12 +35,16 @@ public class ModItems
 
     public static final RegistryObject<Item> JEMZCOINUNSTABLE = ITEMS.register("jemzcoinunstable",() -> new JemzcoinUnstableItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> JEMZCOINSTABLE = ITEMS.register("jemzcoinstable",() -> new Item(new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ZMEJCOINUNSTABLE = ITEMS.register("zmejcoinunstable",() -> new ZmejcoinUnstableItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> JEMZCOINSTABLE = ITEMS.register("jemzcoinstable",() -> new Item(new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ZMEJCOINSTABLE = ITEMS.register("zmejcoinstable",() -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> JEMZCOINUNSTABLESWORD = ITEMS.register("jemzcoinunstablesword",
             () -> new JemzcoinSwordUnstable());
     public static final RegistryObject<Item> JEMZCOINSTABLESWORD = ITEMS.register("jemzcoinstablesword",
             () -> new JemzcoinSwordStable());
+    public static final RegistryObject<Item> ZMEJCOINSWORD = ITEMS.register("zmejcoinsword",
+            () -> new ZmejcoinSword());
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);

@@ -26,6 +26,9 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.JEMZCOINSTABLE.get());
                 output.accept(ModItems.JEMZCOINUNSTABLESWORD.get());
                 output.accept(ModItems.JEMZCOINSTABLESWORD.get());
+                output.accept(ModItems.ZMEJCOINSWORD.get());
+                output.accept(ModItems.ZMEJCOINUNSTABLE.get());
+                output.accept(ModItems.ZMEJCOINSTABLE.get());
 
             })
             .build());

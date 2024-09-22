@@ -10,5 +10,9 @@
   "item.jemzmod.jemzcoinstable": "Stable Jemz Coin",
   "item.jemzmod.jemzcoinunstablesword": "Unstable Jemz Coin Sword",
   "item.jemzmod.jemzcoinstablesword": "Stable Jemz Coin Sword",
+  "item.jemzmod.zmejcoinunstable": "Unstable Zmej Coin",
+  "item.jemzmod.zmejcoinstable": "Stable Zmej Coin",
+  "item.jemzmod.zmejcoinsword": "Zmej Coin Sword",
+
   "creativetab.jemz_tab": "Jemz Tab"
 }

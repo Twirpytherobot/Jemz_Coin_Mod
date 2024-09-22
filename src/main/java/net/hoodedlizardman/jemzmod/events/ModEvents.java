@@ -4,8 +4,11 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.hoodedlizardman.jemzmod.JemzMod;
 import net.hoodedlizardman.jemzmod.item.ModItems;
+
 import net.hoodedlizardman.jemzmod.item.custom.JemzcoinItem;
 import net.hoodedlizardman.jemzmod.item.custom.JemzcoinUnstableItem;
+import net.hoodedlizardman.jemzmod.item.custom.ZmejcoinUnstableItem;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -15,11 +18,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityTravelToDimensionEvent;
 import net.minecraftforge.event.entity.item.ItemEvent;
+import net.minecraftforge.event.entity.item.ItemExpireEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.level.ExplosionEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
@@ -89,5 +95,21 @@ public class ModEvents {
         }
     }
 
+    @SubscribeEvent()
+    public void onItemToss(ItemTossEvent event) {
+        ItemEntity itemEntity = event.getEntity();
+        ItemStack itemStack = itemEntity.getItem();
+
+        // Check if the item is the Unstable Zmejcoin
+        if (itemStack.getItem() instanceof ZmejcoinUnstableItem) {
+            // Check if the item is in water
+            BlockPos itemPos = new BlockPos((int)itemEntity.getX(), (int)itemEntity.getY(), (int)itemEntity.getZ());
+            if (itemEntity.level().getBlockState(itemPos).getBlock() == Blocks.WATER) {
+                // Convert to ZmejcoinStable
+                itemEntity.setItem(new ItemStack(ModItems.ZMEJCOINSTABLE.get(), 1));
+                System.out.println("it kinda worked!");
+            }
+        }
+    }
 
 }

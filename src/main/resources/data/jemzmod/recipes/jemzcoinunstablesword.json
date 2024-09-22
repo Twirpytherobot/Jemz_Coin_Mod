@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "*",
+    "@"
+  ],
+  "key": {
+    "#": {
+      "item": "jemzmod:jemzcoin"
+    },
+    "*": {
+      "item": "jemzmod:jemzcoinunstable"
+    },
+    "@": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "jemzmod:jemzcoinunstablesword"
+  }
+}

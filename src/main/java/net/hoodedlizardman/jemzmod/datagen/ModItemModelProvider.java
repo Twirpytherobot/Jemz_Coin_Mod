@@ -47,9 +47,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.JEMZCOINUNWRAPPED);
         simpleItem(ModItems.ZMEJCOIN);
         simpleItem(ModItems.JEMZCOINUNSTABLE);
+        simpleItem(ModItems.ZMEJCOINSTABLE);
+        simpleItem(ModItems.ZMEJCOINUNSTABLE);
         simpleItem(ModItems.JEMZCOINSTABLE);
         handheldItem(ModItems.JEMZCOINUNSTABLESWORD);
         handheldItem(ModItems.JEMZCOINSTABLESWORD);
+        handheldItem(ModItems.ZMEJCOINSWORD);
 //      evenSimplerBlockItem(ModBlocks.JEMZCOINVENDINGMACHINE_BLOCK);
 //        simpleItem(ModItems.SAPPHIRE);
 //        simpleItem(ModItems.RAW_SAPPHIRE);
