@@ -4,6 +4,7 @@ import net.hoodedlizardman.jemzmod.JemzMod;
 import net.hoodedlizardman.jemzmod.block.ModBlocks;
 import net.hoodedlizardman.jemzmod.block.custom.JemzCoinVendingMachineBlock;
 import net.hoodedlizardman.jemzmod.item.custom.JemzcoinItem;
+import net.hoodedlizardman.jemzmod.item.custom.JemzcoinUnstableItem;
 import net.minecraft.util.datafix.fixes.ItemStackEnchantmentNamesFix;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -33,6 +34,9 @@ public class ModItems
 
     public static final RegistryObject<Item> JEMZCOINUNWRAPPED = ITEMS.register("jemzcoinunwrapped",() -> new Item(new Item.Properties().food(JEMZCOIN_UNWRAPPED_FOOD)));
 
+    public static final RegistryObject<Item> JEMZCOINUNSTABLE = ITEMS.register("jemzcoinunstable",() -> new JemzcoinUnstableItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> JEMZCOINSTABLE = ITEMS.register("jemzcoinstable",() -> new Item(new Item.Properties().fireResistant()));
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);

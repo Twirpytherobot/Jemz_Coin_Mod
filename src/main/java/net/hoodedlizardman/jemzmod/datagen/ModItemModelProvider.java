@@ -46,6 +46,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.JEMZCOINWRAPPER);
         simpleItem(ModItems.JEMZCOINUNWRAPPED);
         simpleItem(ModItems.ZMEJCOIN);
+        simpleItem(ModItems.JEMZCOINUNSTABLE);
+        simpleItem(ModItems.JEMZCOINSTABLE);
 //      evenSimplerBlockItem(ModBlocks.JEMZCOINVENDINGMACHINE_BLOCK);
 //        simpleItem(ModItems.SAPPHIRE);
 //        simpleItem(ModItems.RAW_SAPPHIRE);

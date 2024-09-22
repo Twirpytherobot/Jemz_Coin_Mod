@@ -18,22 +18,27 @@ public class JemzcoinItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand){
         ItemStack itemStack = player.getItemInHand(hand);
+        if(player.isShiftKeyDown()){
+            if(!level.isClientSide){
 
-        if(!level.isClientSide){
-            itemStack.shrink(1);
-            ItemStack unwrappedItemStack = new ItemStack(ModItems.JEMZCOINUNWRAPPED.get());
-            ItemStack wrapperItemStack = new ItemStack(ModItems.JEMZCOINWRAPPER.get());
-            if(!player.getInventory().add(unwrappedItemStack)){
-                player.drop(unwrappedItemStack,false);
+                itemStack.shrink(1);
+                ItemStack unwrappedItemStack = new ItemStack(ModItems.JEMZCOINUNWRAPPED.get());
+                ItemStack wrapperItemStack = new ItemStack(ModItems.JEMZCOINWRAPPER.get());
+                if(!player.getInventory().add(unwrappedItemStack)){
+                    player.drop(unwrappedItemStack,false);
+                }
+                if(!player.getInventory().add(unwrappedItemStack)){
+                    player.drop(wrapperItemStack,false);
+                }
+                level.playSound(null,player.getX(),player.getY(),player.getZ(),
+                        SoundEvents.AZALEA_HIT,
+                        SoundSource.PLAYERS,1.0f,1.0f);
+
             }
-            if(!player.getInventory().add(unwrappedItemStack)){
-                player.drop(wrapperItemStack,false);
-            }
-            level.playSound(null,player.getX(),player.getY(),player.getZ(),
-                    SoundEvents.AZALEA_HIT,
-                    SoundSource.PLAYERS,1.0f,1.0f);
+            return InteractionResultHolder.sidedSuccess(itemStack,level.isClientSide());
         }
-        return InteractionResultHolder.sidedSuccess(itemStack,level.isClientSide());
+        return InteractionResultHolder.pass(itemStack);
+
     }
 }
 

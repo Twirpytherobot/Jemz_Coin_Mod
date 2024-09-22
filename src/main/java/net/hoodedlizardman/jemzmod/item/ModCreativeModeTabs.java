@@ -21,6 +21,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.JEMZCOIN_BLOCK.get());
                 output.accept(ModItems.JEMZCOINWRAPPER.get());
                 output.accept(ModItems.ZMEJCOIN.get());
+                output.accept(ModBlocks.JEMZCOINVENDINGMACHINE_BLOCK.get());
+                output.accept(ModItems.JEMZCOINUNSTABLE.get());
+                output.accept(ModItems.JEMZCOINSTABLE.get());
+
             })
             .build());
 
