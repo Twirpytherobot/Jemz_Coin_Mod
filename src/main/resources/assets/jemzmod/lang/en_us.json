@@ -8,5 +8,7 @@
   "block.jemzmod.jemzcoinvendingmachine_block" : "Jemz Coin Vending Machine",
   "item.jemzmod.jemzcoinunstable": "Unstable Jemz Coin",
   "item.jemzmod.jemzcoinstable": "Stable Jemz Coin",
+  "item.jemzmod.jemzcoinunstablesword": "Unstable Jemz Coin Sword",
+  "item.jemzmod.jemzcoinstablesword": "Stable Jemz Coin Sword",
   "creativetab.jemz_tab": "Jemz Tab"
 }
