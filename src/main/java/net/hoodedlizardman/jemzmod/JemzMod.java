@@ -2,7 +2,9 @@ package net.hoodedlizardman.jemzmod;
 
 import com.mojang.logging.LogUtils;
 import net.hoodedlizardman.jemzmod.block.ModBlocks;
+import net.hoodedlizardman.jemzmod.entity.ModEntities;
 import net.hoodedlizardman.jemzmod.events.UnstableJemzCoinEffect;
+import net.hoodedlizardman.jemzmod.events.UnstableZmejCoinEffect;
 import net.hoodedlizardman.jemzmod.item.ModCreativeModeTabs;
 import net.hoodedlizardman.jemzmod.item.ModItems;
 import net.hoodedlizardman.jemzmod.loot.ModLootModifiers;
@@ -39,12 +41,14 @@ public class JemzMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
         ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new UnstableJemzCoinEffect());
+        MinecraftForge.EVENT_BUS.register(new UnstableZmejCoinEffect());
 
 
 
